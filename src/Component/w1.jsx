@@ -208,14 +208,14 @@ const w1 = () => {
               <span className="text-xs font-thin text-white ">Ya allah the most loving</span>
               <span className="text-xs font-thin text-white text-center mx-10  ">With your blessing, you bring us together in the bonds of holy matrimony</span>
               <h1 className="font-bold font-Allura text-white text-5xl ">The wedding </h1>
-              <h1 className="font-bold font-Allura text-white text-5xl   ">Udjo & Putri</h1>
+              <h1 className="font-bold font-Allura text-white text-5xl   ">Reja & Evi</h1>
           </div>      
         </div>
     </section>
 
 {/* section2 */}
     <section id="home">
-    <div className="flex flex-col items-center bg-white min-h-screen py-10 dark:bg-slate-800">
+    <div className="flex flex-col items-center bg-white min-h-screen py-10 dark:bg-slate-900 border-4">
       {/* Container utama */}
       <div className="bg-white w-[80%] rounded-xl text-center p-8 shadow-md dark:bg-gray-700">
         {/* Judul */}
@@ -235,7 +235,7 @@ const w1 = () => {
               alt="Groom"
               className="w-[150px] h-[150px] rounded-full"
             />
-            <h3 className="text-black  font-semibold text-xl mt-4 font-Montserrat dark:text-gold">Udjo Alexander</h3>
+            <h3 className="text-black  font-semibold text-xl mt-4 font-Montserrat dark:text-gold">Reja Jafar</h3>
             <p className="text-neutral-700 text-sm font-Montserrat dark:text-darkgold">Son of Mr. Ilham & Mrs. Fatima</p>
             {/* Ikon media sosial */}
             <div className="flex space-x-4 mt-2">
@@ -273,7 +273,7 @@ const w1 = () => {
               alt="Bride"
               className="w-[150px] h-[150px] rounded-full "
             />
-            <h3 className="text-black dark:text-gold font-semibold text-xl mt-4 font-Montserrat">Putri Amanda</h3>
+            <h3 className="text-black dark:text-gold font-semibold text-xl mt-4 font-Montserrat">Evi Amanda</h3>
             <p className="text-neutral-700  dark:text-darkgold text-sm font-Montserrat">Daughter of Mr. Ibrahim & Mrs. Etna Dewi</p>
             {/* Ikon media sosial */}
             <div className="flex space-x-4 mt-2">
@@ -316,11 +316,11 @@ const w1 = () => {
 
 
 {/* section3 */}
-  <div className="bg-white min-h-screen py-8 px-4">
+  <div className="bg-putih min-h-screen py-8 px-4  dark:bg-gray-900">
   {/* Header */}
   <div className="text-center mb-8">
-    <h1 className="text-3xl font-semibold text-black font-Montserra">We’re Getting Married</h1>
-    <p className="text-sm text-black mt-2 font-Montserrat">Jl.Kp.Halimun Rt003 Rw 004  </p>
+    <h1 className="text-3xl font-semibold text-black font-Montserra dark:text-darkgold">We’re Getting Married</h1>
+    <p className="text-sm text-black mt-2 font-Montserrat dark:text-neutral-600">Jl.Kp.Halimun Rt003 Rw 004  </p>
     <p className="text-md text-neutral-600 mt-2 font-Montserrat">03 February 2025</p>
   </div>
 
@@ -343,7 +343,7 @@ const w1 = () => {
 
   <section>
   {/* Event Sections */}
-  <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8 ">
+  <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 mb-8  ">
     {/* Wedding Ceremony */}
     <div className="shadow-lg rounded-lg overflow-hidden flex justify-center items-center ">
       <img
@@ -402,7 +402,7 @@ const w1 = () => {
 
  {/* Gallery */}
  <section id="map">
-<div className="bg-slate-50 py-10">
+<div className="bg-slate-50 py-10 dark:bg-slate-900 dark:border-4">
       <h2 className="text-center text-2xl font-bold text-gold mb-8 font-Montserrat">Gallery</h2>
       <div className="container mx-auto px-4">
         <Swiper
@@ -457,7 +457,7 @@ const w1 = () => {
     </section>
   <section id="gift">
     {/* bayar */}
-    <div className="flex flex-col items-center px-4 py-8 lg:px-20 bg-white">
+    <div className="flex flex-col items-center px-4 py-8 lg:px-20 bg-white dark:bg-slate-900">
   <h2 className="text-gold  text-2xl font-bold mb-4 font-Montserrat">Give a Gift</h2>
   <p className="text-gray-600 text-center mb-8 font-Montserrat">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam, ipsum erat pretium.
@@ -471,8 +471,8 @@ const w1 = () => {
         {/* <!-- Account 1 --> */}
         <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
           <div>
-            <p className="text-gray-700 font-semibold font-Montserrat">Udjo alexander</p>
-            <p className="text-gold font-Montserrat font-semibold text-sm">009 - 0222 2444 21</p>
+            <p className="text-gray-700 font-semibold font-Montserrat">Reja Jafar</p>
+            <p className="text-gray-700 dark:text-gold font-Montserrat font-semibold text-sm">009 - 0222 2444 21</p>
           </div>
           {/* <button class="text-pink-600">
             <i className="bi bi-clipboard"></i>
@@ -481,8 +481,8 @@ const w1 = () => {
         {/* <!-- Account 2 --> */}
         <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
           <div>
-            <p className="text-gray-700 font-semibold font-Montserrat ">Putri Amanda</p>
-            <p className="text-sm">009 - 0222 2444 21</p>
+            <p className="text-gray-700  font-semibold font-Montserrat ">Evi Amanda</p>
+            <p className="text-sm text-gray-700  dark:text-gold font-Montserrat font-semibold ">009 - 0222 2444 21</p>
           </div>
           {/* <button class="text-pink-600">
             <i className="bi bi-clipboard"></i>
@@ -492,9 +492,9 @@ const w1 = () => {
     </div>
 
     {/* <!-- Offline Gift Section --> */}
-    <div className="bg-white shadow-md p-6 rounded-lg">
+    <div className="bg-white shadow-md p-6 rounded-lg dark:bg-slate-900 ">
       <h3 className="text-gold text-xl font-semibold mb-4">Offline Gift</h3>
-      <p className="text-gray-700 mb-4 font-Montserrat">
+      <p className="text-gray-700 font-semibold dark:text-darkgold mb-4 font-Montserrat">
         Jl. Kp.Halimun RT 003 RW 004 Desa.Warudoyong Kecamatan Cikalongkulon
       </p>
       <button className="bg-darkgold text-white px-4 py-2 rounded-lg font-Montserrat">
@@ -506,7 +506,7 @@ const w1 = () => {
 
 </section>
   
-<section className="bg-slate-50 py-10 px-4 lg:px-20">
+<section className="bg-slate-50 py-10 px-4 lg:px-20 dark:bg-gray-900 dark:border-4">
       <div className="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6">
         {/* Title */}
         <h2 className="text-2xl font-bold text-gold text-center mb-6 font-Montserrat">
@@ -594,7 +594,7 @@ const w1 = () => {
           <ul className="space-y-4">
             <li className="flex items-center justify-between bg-pink-50 px-4 py-3 rounded-lg">
               <div>
-                <p className="text-sm font-medium text-gray-700 ">Tia SMAN68BDG</p>
+                <p className="text-sm font-medium text-gray-700 ">Mass Abo</p>
                 <p className="text-sm text-gray-500">Congrats!</p>
               </div>
               <span className="bg-green-100 text-green-700 text-sm px-3 py-1 rounded-full">
@@ -628,12 +628,12 @@ const w1 = () => {
     <div className='container flex justify-center items-center  max-w-full  my-20'>
   <div className=" mx-auto flex  justify-center items-center">
     <img src={wedding} alt="wedding" className="opacity-50" />
-    <h1 className="font-bold font-Allura text-white text-5xl absolute  ">Udjo & Putri</h1>
+    <h1 className="font-bold font-Allura text-white text-5xl absolute  ">Reja & Evi</h1>
   </div>
   </div>
 </section>
 
-<div className="text-center mt-8 my-16 py-6 text-gray-700  ">
+<div className="text-center mt-8 my-16 py-6 text-gray-700 dark:bg-gray-900  dark:text-darkgold dark:border-4 ">
     <h1 className="text-sm font-Montserrat font-semibold">Copy Right Awang Darmawan</h1>
     <div className=''>
     <a href="https://wa.me/083125307355" className='flex justify-center items-center gap-1 hover:text-green-500'><FaWhatsapp className=" text-2xl my-1"/>+6283125307355</a>
