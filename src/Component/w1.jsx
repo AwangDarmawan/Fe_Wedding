@@ -89,15 +89,15 @@ const w1 = () => {
     <nav className="py-4 px-20 fixed w-full">
         <div className="container">
           <div className="flex items-center justify-between">
-            <div className="flex flex-row-reverse gap-3 ">
-            <button
+          <div className="flex flex-row-reverse gap-3 ">
+        <button
           onClick={toggleDarkMode}
-          className="relative inline-flex items-center cursor-pointer rounded-full w-12 h-6 bg-gray-300 dark:bg-gray-700 transition-all duration-300 "
+          className="relative inline-flex items-center cursor-pointer rounded-full w-12 h-6 bg-gray-300 dark:bg-gray-700 transition-all duration-300  "
         >
           {/* Ikon Matahari dan Bulan */}
           <span
-            className={`absolute text-sm left-1 transition-transform duration-300 ease-in-out transform ${
-              darkMode ? "opacity-0" : "opacity-100"
+            className={`absolute text-lg left-1 transition-transform duration-300 ease-in-out transform ${
+              darkMode 
             }`}
           >
             ☀️
@@ -105,7 +105,7 @@ const w1 = () => {
           
           <span
             className={`absolute text-sm right-1 transition-transform duration-300 ease-in-out transform ${
-              darkMode ? "opacity-100" : "opacity-0"
+              darkMode 
             }`}
           >
             🌙 
@@ -120,7 +120,7 @@ const w1 = () => {
             }`}
           ></span>
         </button>
-              {/* <h1 className="my-auto font-semibold font-Allura text-pink-500 text-lg">Wedding Invitation</h1> */}
+              
        
             </div>
             <img
@@ -208,6 +208,7 @@ const w1 = () => {
               <span className="text-xs font-thin text-white ">Ya allah the most loving</span>
               <span className="text-xs font-thin text-white text-center mx-10  ">With your blessing, you bring us together in the bonds of holy matrimony</span>
               <h1 className="font-bold font-Allura text-white text-5xl ">The wedding </h1>
+          
               <h1 className="font-bold font-Allura text-white text-5xl   ">Reja & Evi</h1>
           </div>      
         </div>

@@ -30,11 +30,23 @@ export default {
       boxShadow: {
         '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
         '4xl': '0 100px 200px rgba(182, 97, 176, 0.8)',
-      }
-      
-      // padding :{
-      //   '100': '25rem',
+      },
+
+      // animation: {
+      //   typing: "typing 3.5s steps(30) 1s forwards", // Efek mengetik
+      //   blinkCaret: "blinkCaret 0.75s step-end infinite", // Efek kursor berkedip
       // },
+      // keyframes: {
+      //   typing: {
+      //     "0%": { width: "0" },
+      //     "100%": { width: "100%" },
+      //   },
+      //   blinkCaret: {
+      //     "50%": { borderColor: "transparent" },
+      //   },
+      // },
+      
+      
       
     },
     
