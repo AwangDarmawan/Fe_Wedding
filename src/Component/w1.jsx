@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import wedding from "../assets/Img/png/hutan-pinus.png"
 import pria from "../assets/Img/png/pria.png" 
 import wanita from "../assets/Img/png/wanita.png"
@@ -18,13 +18,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faClock, faImages, faGift, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import Toggle from "../assets/Img/png/Toogle.svg";
 import { Link } from 'react-router-dom';
-
-
+import musik from '../assets/Img/audio/pernikahan.mp3'
 
 
 const w1 = () => {
+
+ 
+
+  // Use useEffect to automatically play the audio when the component is mounted
+  const audioRef = useRef(null);
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  }, []);
   
   const [darkMode, setDarkMode] = useState(false);
+
+  
 
   // Simpan preferensi pengguna ke localStorage
   useEffect(() => {
@@ -642,6 +653,13 @@ const w1 = () => {
     </div>
   </div>
   </div>
+
+  <div className="absolute bottom-4 bg-transparent w-full text-center">
+  <audio ref={audioRef} className="bg-transparent mx-auto w-64">
+    <source src={musik} type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+</div>
     </>
 
 

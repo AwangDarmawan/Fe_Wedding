@@ -6,31 +6,13 @@ import kanan from "../assets/Img/png/kanan.png"
 import Bc from "../assets/Img/png/bc.png"
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
-import musik from '../assets/Img/audio/WhatsApp Audio 2024-11-30 at 10.40.35.mp3'
+
+
 
 
 const Awal = () => {
-  const [audioPlaying, setAudioPlaying] = useState(false);
-
-  useEffect(() => {
-    // Menyimpan status audio di URL dengan query parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    const isAudioOn = urlParams.get('audio') === 'true';
-
-    setAudioPlaying(isAudioOn);  // Update audio state berdasarkan query URL
-  }, []);
-
-  const toggleAudio = () => {
-    setAudioPlaying((prev) => {
-      const newStatus = !prev;
-      // Memperbarui URL untuk mencatat status audio
-      const url = new URL(window.location);
-      url.searchParams.set('audio', newStatus ? 'true' : 'false');
-      window.history.pushState({}, '', url.toString());
-      return newStatus;
-    });
-  };
+ 
+  
   return (
     <>
     <section className='bg-putih min-h-screen dark:bg-gray-900 ' >
@@ -59,7 +41,7 @@ const Awal = () => {
             className='filter hue-rotate-300 saturate-200'
             />
             <Link to="/undangan">
-      <button className="bg-darkgold text-putih  px-6 py-2 rounded-full flex items-center justify-center flex-col shadow-lg hover:shadow-xl transition-shadow duration-300  " onClick={toggleAudio} >  
+      <button  className="bg-darkgold text-putih  px-6 py-2 rounded-full flex items-center justify-center flex-col shadow-lg hover:shadow-xl transition-shadow duration-300  ">  
             <img
             src={amplop}
             alt=""
@@ -79,22 +61,9 @@ const Awal = () => {
     <a href="https://instagram.com/awng_drmwn" className='flex justify-center items-center gap-1 hover:text-red-500 dark:text-darkgold'><FaInstagram className=" text-2xl my-1"/>--@awng_drmwn</a>
     </div>
   </div>
-  {audioPlaying && (
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-            <audio autoPlay loop>
-              <source src={musik} type="audio/mp3" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        )}
-{audioPlaying && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-          <audio autoPlay loop>
-            <source src={musik} type="audio/mp3" />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      )}
+
+        
+
     </section>
 
     
