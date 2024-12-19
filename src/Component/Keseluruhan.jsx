@@ -22,8 +22,7 @@ import Footer from "./Footer";
 
 
 const Keseluruhan = () => {
-  
-  // Use useEffect to automatically play the audio when the component is mounted
+ 
   const audioRef = useRef();
   useEffect(() => {
     if (audioRef.current) {
