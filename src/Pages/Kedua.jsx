@@ -1,5 +1,6 @@
 import React from 'react'
-import W1 from '../Component/w1'
+
+import Keseluruhan from '../Component/Keseluruhan'
 // import Nav from '../Component/Nav'
 
 const Kedua = () => {
@@ -7,7 +8,7 @@ const Kedua = () => {
   return (
     <>
     
-      <W1/>
+      <Keseluruhan/>
      
     </>
   )
