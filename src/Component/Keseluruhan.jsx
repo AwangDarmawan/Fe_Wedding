@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import musik from '../assets/Img/audio/pernikahan.mp3'
 import Nav from "./Nav";
 import Satu from "./Satu";
-import Dua from "./dua";
+import Dua from "./Dua";
 import Tiga from "./Tiga";
 import Empat from "./Empat";
 import Lima from "./Lima";
