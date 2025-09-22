@@ -122,7 +122,7 @@ const Admin = () => {
             Hormat kami,{"\n"}REJA & EVI
           </p>
           {/* Tombol Share Hanya Ikon */}
-        <div className="flex gap-4 mt-4">
+        <div className="flex gap-4">
           {/* WhatsApp */}
           <a
             href={`https://api.whatsapp.com/send?text=Halo,%20lihat%20undangan%20pernikahan%20kami:%20${invitationLink}`}
