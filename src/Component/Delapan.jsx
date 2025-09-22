@@ -18,9 +18,12 @@ function Delapan() {
   try{
    const ResultData = await getData();
    console.log("ww",ResultData)
-   setLihatData(ResultData)
+  // Ambil langsung array wedding
+    setLihatData(ResultData.wedding || []); 
+   
   } catch (error) {
     console.error("Error fetching data:", error);
+     setLihatData([]); 
   }
 };
 
