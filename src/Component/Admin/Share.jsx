@@ -3,9 +3,7 @@ export const encodeForShare = (text) => encodeURIComponent(text);
 
 // generate link undangan
 export const generateInvitationLink = (name) =>
-  name
-    ? `https://pernikahan-digital.vercel.app/${name.toLowerCase().trim().replace(/\s+/g, " ")}`
-    : "";
+  name ? `https://pernikahan-digital.vercel.app/${encodeURIComponent(name.toLowerCase())}` : "";
 
 
 // generate teks undangan lengkap
