@@ -1,4 +1,4 @@
-import React from 'react'
+
 import wed from "../assets/Img/png/W1.png"
 import wed2 from "../assets/Img/png/w2.png"
 

@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 
 
 import "swiper/css";
@@ -26,7 +26,7 @@ const Keseluruhan = () => {
   const audioRef = useRef();
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.play();
+      audioRef.current.play() ;
      
     }
   }, []);
@@ -98,7 +98,7 @@ const Keseluruhan = () => {
 
 {/* musik */}
   <div className="absolute bottom-4 bg-transparent w-full text-center" >
-  <audio ref={audioRef} className="bg-transparent mx-auto w-64">
+  <audio ref={audioRef}  className="bg-transparent mx-auto w-64">
     <source src={musik} type="audio/mp3" />
     Your browser does not support the audio element.
   </audio>

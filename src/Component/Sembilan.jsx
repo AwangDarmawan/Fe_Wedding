@@ -1,4 +1,4 @@
-import React from 'react'
+
 import wedding from "../assets/Img/png/hutan-pinus.png"
 
 function Sembilan() {

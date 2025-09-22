@@ -1,4 +1,4 @@
-import React from 'react'
+
 import grup1 from "../assets/Img/png/group1.png"
 import grup2 from "../assets/Img/png/group2.png"
 import { Swiper, SwiperSlide } from "swiper/react";

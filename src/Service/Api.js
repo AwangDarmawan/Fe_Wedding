@@ -2,6 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 const baseUrl = import.meta.env.VITE_BASE_URL;
 
+
 export const getData = async () => {
     try {
       const response = await axios.get(`${baseUrl}/wedding`);
@@ -29,12 +30,24 @@ export const getData = async () => {
     }
   };
 
+  // export const DeletePesan = async (id) => {
+  //   try {
+  //     const response = await axios.delete(`${baseUrl}/wedding/${id}`)
+  //     toast.success("data berhasil di hapus")
+  //     return response.data;
+  //   } catch (error) {
+  //     throw error;
+  //   }
+  // };
+
+  
   export const DeletePesan = async (id) => {
     try {
       const response = await axios.delete(`${baseUrl}/wedding/${id}`)
       toast.success("data berhasil di hapus")
       return response.data;
     } catch (error) {
+      toast.error("An error occurred while submitting.");
       throw error;
     }
   };

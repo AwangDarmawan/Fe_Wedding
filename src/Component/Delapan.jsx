@@ -1,8 +1,11 @@
-import React, { useEffect, useState,useRef } from 'react'
+import  { useEffect, useState } from 'react'
 import { addpesan, DeletePesan, getData } from '../Service/Api'
 import { toast } from "react-toastify";
+// import { useParams } from 'react-router-dom';
 
 function Delapan() {
+  // const { nama } = useParams();
+  // const messagesContainerRef = useRef(null);
   const [lihatData, setLihatData] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
@@ -10,9 +13,9 @@ function Delapan() {
     attendance: '',
   });
 
-  const messagesEndRef = useRef(null); 
+  // const messagesEndRef = useRef(null); 
  
-  const LihatKaryawan = async () => {
+  const FetchData = async () => {
   try{
    const ResultData = await getData();
    console.log("ww",ResultData)
@@ -24,23 +27,28 @@ function Delapan() {
 
 
 useEffect(() => {
-  LihatKaryawan();
+  FetchData();
 }, []);
- // Handle submit form
+
+// useEffect(() => {
+//   if (nama) {
+//     setFormData((prev) => ({ ...prev, name: nama }));
+//   }
+// }, [nama]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-       // Validasi apakah semua field sudah diisi
+    
        if (!formData.name || !formData.message || !formData.attendance) {
         toast.error("Semua data harus diisi!");
-        return; // Jangan lanjutkan ke proses pengiriman data
+        return; 
       }
 
     try {
       const response = await addpesan(formData);
-      console.log(response);  // Jika ingin log response API
-      // Reset form setelah sukses
-      LihatKaryawan();
+      console.log(response);  
+      FetchData();
       setFormData({ name: '', message: '', attendance: '' });
     } catch (error) {
     
@@ -55,21 +63,26 @@ const handleInputChange = (e) => {
     [name]: value,
   }));
 };
-useEffect(() => {
-  // Scroll ke bawah setelah data berubah
-  if (messagesEndRef.current) {
-    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-  }
-}, [lihatData]);
+
+
+
 
 const handleDelete = async (id) => {
+  const confirmDelete = window.confirm("Apakah Anda yakin ingin menghapus data ini? ");
+  if (!confirmDelete) {
+    return; 
+  }
+
   try {
     await DeletePesan(id); 
-    LihatKaryawan(); 
+    FetchData(); 
+    alert("Data berhasil dihapus!");
   } catch (error) {
     console.error("Error deleting message:", error);
+    alert("Terjadi kesalahan saat menghapus data!");
   }
 };
+
 
   return (
     <>
@@ -172,10 +185,11 @@ const handleDelete = async (id) => {
       
         <div className="mt-8 ">
           <h3 className="text-lg font-semibold text-gold mb-4">Messages</h3>
-          <ul className="space-y-4 max-h-80 overflow-y-auto">
+          <ul className="space-y-4 max-h-80 overflow-y-auto"  >
+            
           {lihatData.map((item) => (
-            <li className="flex items-center justify-between bg-pink-50 px-4 py-3 rounded-lg">
-              <div key={item.id}>
+            <li className="flex items-center justify-between bg-pink-50 px-4 py-3 rounded-lg" key={item.id}>
+              <div >
                 <p className="text-sm font-medium text-gray-700 ">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.message}</p>
               </div>
@@ -203,7 +217,7 @@ const handleDelete = async (id) => {
             </li>
          ))}
             </ul>
-        <div ref={messagesEndRef} />
+        {/* <div ref={messagesEndRef} /> */}
        </div >
        </div>
     </>

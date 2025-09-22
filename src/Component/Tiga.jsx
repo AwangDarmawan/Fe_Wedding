@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 
 function Tiga() {
-     const targetDate = new Date("2025-02-03T00:00:00").getTime(); 
+     const targetDate = new Date("2025-12-22T00:00:00").getTime(); 
   
        // Set initial state for the countdown
        const [timeLeft, setTimeLeft] = useState({
@@ -44,7 +44,7 @@ function Tiga() {
    <div className="text-center mb-8">
     <h1 className="text-3xl font-semibold text-black font-Montserra dark:text-gold">We’re Getting Married</h1>
     <p className="text-sm text-black mt-2 font-Montserrat dark:text-darkgold">Jl.Kp.Halimun Rt003 Rw 004  </p>
-    <p className="text-md text-neutral-600 mt-2 font-Montserrat dark:text-darkgold">03 February 2025</p>
+    <p className="text-md text-neutral-600 mt-2 font-Montserrat dark:text-darkgold">22 Desember 2025</p>
   </div>
 
   

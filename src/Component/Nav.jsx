@@ -1,31 +1,36 @@
-import React, { useState,useEffect } from "react";
+import { useState} from "react";
+
 
 import Toggle from "../assets/Img/png/Toogle.svg"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faClock, faImages, faGift, faSignOut } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useParams} from 'react-router-dom';
+import { useTheme } from "../Component/Contextmode/UseTheme";
 
 function Nav() {
+  const { nama } = useParams();
   const [navOpen, setNavOpen] = useState(true);
-  const [darkMode, setDarkMode] = useState(false);
+  const {darkMode,toggleDarkMode} = useTheme()
+  // const [darkMode, setDarkMode] = useState(false);
 
-  useEffect(() => {
-      const savedMode = localStorage.getItem("darkMode") === "true";
-      setDarkMode(savedMode);
-      if (savedMode) {
-        document.documentElement.classList.add("dark");
-      }
-    }, []);
+  // useEffect(() => {
+  //     const savedMode = localStorage.getItem("darkMode") === "true";
+  //     setDarkMode(savedMode);
+  //     if (savedMode) {
+  //       document.documentElement.classList.add("dark");
+  //     }
+  //   }, []);
   
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem("darkMode", !darkMode);
-    document.documentElement.classList.toggle("dark", !darkMode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  //   localStorage.setItem("darkMode", !darkMode);
+  //   document.documentElement.classList.toggle("dark", !darkMode);
+  // };
 
   return (
+    
     <>
      <nav className="py-4 px-20 fixed w-full">
             <div className="container">
@@ -73,25 +78,34 @@ function Nav() {
                 <div className="order-2 hidden lg:block">
                   <ul className="flex gap-16">
                     <li>
-                      <a href="" className="text-pink-500 hover:text-pink-600">
+                      <a href="#home" className=" text-gold hover:bg-sky-700">
                         Home
                       </a>
                     </li>
                     <li>
-                      <a href="#waktu" className="text-pink-500 text-sm hover:bg-sky-700">
+                      <a href="#waktu" className=" text-gold text-sm hover:bg-sky-700">
                         Waktu
                       </a>
                     </li>
                     <li>
-                      <a href="#map" className="text-pink-500 text-sm hover:bg-sky-700">
+                      <a href="#map" className=" text-gold text-sm hover:bg-sky-700">
                         Gallery
                       </a>
                     </li>
                     <li>
-                      <a href="#gift" className="  text-pink-500 text-sm hover:bg-sky-700">
+                      <a href="#gift" className="  text-gold text-sm hover:bg-sky-700">
                         Gift
                       </a>
                     </li>
+                   
+                     {/* <Link to='/'> */}
+                       <Link to={`/${nama}`}>
+                    <li>
+                      <a  className="  text-gold text-sm hover:bg-sky-700">
+                        Out
+                      </a>
+                    </li>
+                    </Link>
                   </ul>
                 </div>
               </div>
@@ -99,9 +113,9 @@ function Nav() {
                 <div className="fixed z-50 bottom-0 right-0 left-0 p-4 my-0 bg-darkgold  border lg:hidden">
                   <ul className="flex justify-between">
                     <li>
-                      <a href="" className="flex justify-center flex-col items-center gap-1  hover:bg-gold">
+                      <a href="#home" className="flex justify-center flex-col items-center gap-1  hover:bg-gold">
                         <FontAwesomeIcon icon={faHome} className="text-white" />
-                        <a className="text-white text-base">Home</a>
+                        <span className="text-white text-base">Home</span>
                       </a>
                     </li>
                     <li>
@@ -122,7 +136,8 @@ function Nav() {
                         <span className="text-white text-base text-bold">Gift</span>
                       </a>
                     </li>
-                    <Link to="/">
+                    {/* <Link to="/"> */}
+                    <Link to={`/${nama}`}>
                     <li  >
                       <a  className="flex justify-center flex-col items-center gap-1 hover:bg-gold">
                         <FontAwesomeIcon icon={faSignOut} className="text-white" />
