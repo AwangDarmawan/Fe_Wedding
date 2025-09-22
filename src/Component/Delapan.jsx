@@ -1,11 +1,10 @@
 import  { useEffect, useState } from 'react'
 import { addpesan, DeletePesan, getData } from '../Service/Api'
 import { toast } from "react-toastify";
-// import { useParams } from 'react-router-dom';
+
 
 function Delapan() {
-  // const { nama } = useParams();
-  // const messagesContainerRef = useRef(null);
+ 
   const [lihatData, setLihatData] = useState([]);
   const [formData, setFormData] = useState({
     name: '',
@@ -13,7 +12,7 @@ function Delapan() {
     attendance: '',
   });
 
-  // const messagesEndRef = useRef(null); 
+ 
  
   const FetchData = async () => {
   try{
@@ -217,7 +216,7 @@ const handleDelete = async (id) => {
             </li>
          ))}
             </ul>
-        {/* <div ref={messagesEndRef} /> */}
+        
        </div >
        </div>
     </>
