@@ -19,7 +19,7 @@ function Delapan() {
    const ResultData = await getData();
    console.log("ww",ResultData)
   // Ambil langsung array wedding
-    setLihatData(ResultData.wedding || []); 
+    setLihatData(ResultData|| []); 
    
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -117,7 +117,7 @@ const handleDelete = async (id) => {
             <label htmlFor="message" className="block text-sm font-medium text-gray-700  mb-2">
               *Message
             </label>
-            <input
+            <textarea
               id="message"
            
             name="message"
@@ -126,7 +126,7 @@ const handleDelete = async (id) => {
               value={formData.message}
               className="w-full px-4 py-2 border rounded-lg focus:ring-2  outline-none font-Montserrat dark:text-black " 
               placeholder="Write your message here..."
-            ></input>
+            ></textarea>
           </div>
 
           {/* Attendance Options */}
@@ -190,11 +190,13 @@ const handleDelete = async (id) => {
           <ul className="space-y-4 max-h-80 overflow-y-auto"  >
             
           {lihatData.map((item) => (
+           
             <li className="flex items-center justify-between bg-pink-50 px-4 py-3 rounded-lg" key={item.id}>
               <div >
                 <p className="text-sm font-medium text-gray-700 ">{item.name}</p>
                 <p className="text-sm text-gray-500">{item.message}</p>
               </div>
+              
               
             <button
              onClick={() => handleDelete(item.id)}
