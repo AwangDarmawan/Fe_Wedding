@@ -12,22 +12,7 @@ function Nav() {
   const { nama } = useParams();
   const [navOpen, setNavOpen] = useState(true);
   const {darkMode,toggleDarkMode} = useTheme()
-  // const [darkMode, setDarkMode] = useState(false);
 
-  // useEffect(() => {
-  //     const savedMode = localStorage.getItem("darkMode") === "true";
-  //     setDarkMode(savedMode);
-  //     if (savedMode) {
-  //       document.documentElement.classList.add("dark");
-  //     }
-  //   }, []);
-  
-
-  // const toggleDarkMode = () => {
-  //   setDarkMode(!darkMode);
-  //   localStorage.setItem("darkMode", !darkMode);
-  //   document.documentElement.classList.toggle("dark", !darkMode);
-  // };
 
   return (
     

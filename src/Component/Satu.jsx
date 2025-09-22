@@ -1,8 +1,10 @@
 
 
+import { useParams } from "react-router-dom";
 import wedding from "../assets/Img/png/hutan-pinus.png"
 
 function Satu() {
+   const { nama } = useParams();
    
   return (
     <>
@@ -19,7 +21,9 @@ function Satu() {
                     <span className="text-xs font-thin text-white text-center mx-10  ">With your blessing, you bring us together in the bonds of holy matrimony</span>
                     <h1 className="font-bold font-Allura text-white text-5xl ">The wedding </h1>
                 
-                    <h1 className="font-bold font-Allura text-white text-5xl  ">Reja & Evi</h1>
+                    <h1 className="font-bold font-Allura text-white text-5xl mb-5 ">Reja & Evi</h1>
+                    <h1 className=" font-Montserrat text-white text-sm  ">Kehadiran Mu Sangat Di tunggu <span className="font-bold">{nama}</span> </h1>
+
                     
                 </div>      
               </div>

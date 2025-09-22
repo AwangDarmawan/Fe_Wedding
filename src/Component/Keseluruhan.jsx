@@ -26,7 +26,7 @@ const Keseluruhan = () => {
   const audioRef = useRef();
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.play() ;
+      audioRef.current.play();
      
     }
   }, []);
