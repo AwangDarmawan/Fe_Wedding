@@ -1,4 +1,4 @@
-import Admin from "../Component/Admin"
+import Admin from "../Component/Admin/Admin"
 
 
 function AdminPage() {

@@ -4,7 +4,7 @@ import Awal from "./Pages/Awal";
 import Kedua from "./Pages/Kedua";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Admin from "./Component/Admin";
+import AdminPage from "./Pages/AdminPage";
 function App() {
   
 
@@ -12,7 +12,7 @@ function App() {
     <>
        <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Admin />} />
+          <Route path="/" element={<AdminPage />} />
           <Route path="/:nama" element={<Awal />} />
           <Route path="/undangan/:nama" element={<Kedua />} />
         </Routes>
