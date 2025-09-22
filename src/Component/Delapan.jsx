@@ -14,16 +14,39 @@ function Delapan() {
 
  
  
-  const FetchData = async () => {
-  try{
-   const ResultData = await getData();
-   console.log("ww",ResultData)
-  // Ambil langsung array wedding
-    setLihatData(ResultData|| []); 
+//   const FetchData = async () => {
+//   try{
+//    const ResultData = await getData();
+//    console.log("ww",ResultData)
+//   // Ambil langsung array wedding
+//     setLihatData(ResultData|| []); 
    
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//      setLihatData([]); 
+//   }
+// };
+
+const FetchData = async () => {
+  try {
+    const ResultData = await getData();
+    console.log("ResultData:", ResultData);
+
+    // kalau array langsung
+    if (Array.isArray(ResultData)) {
+      setLihatData(ResultData);
+    } 
+    // kalau dibungkus object dengan key wedding
+    else if (ResultData && Array.isArray(ResultData.wedding)) {
+      setLihatData(ResultData.wedding);
+    } 
+    // fallback kosong
+    else {
+      setLihatData([]);
+    }
   } catch (error) {
     console.error("Error fetching data:", error);
-     setLihatData([]); 
+    setLihatData([]);
   }
 };
 
