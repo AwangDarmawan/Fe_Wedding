@@ -22,7 +22,7 @@ function Satu() {
                     <h1 className="font-bold font-Allura text-white text-5xl ">The wedding </h1>
                 
                     <h1 className="font-bold font-Allura text-white text-5xl mb-5 ">Reja & Evi</h1>
-                    <span className="text-xs font-thin text-white text-center mx-10">Kehadiran Mu Sangat Di tunggu <span className="font-bold">{nama}</span></span>
+                    <span className="text-xs font-thin text-white text-center mx-10">Your presence is eagerly awaited <br/><span className="font-bold text-lg">{nama}</span></span>
 
                     
                 </div>      
