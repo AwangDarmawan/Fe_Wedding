@@ -1,6 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 const baseUrl = import.meta.env.VITE_BASE_URL;
+console.log("Base URL:", baseUrl);
 
 
 export const getData = async () => {

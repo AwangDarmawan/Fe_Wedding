@@ -3,6 +3,7 @@ import { addpesan, DeletePesan, getData } from '../Service/Api'
 import { toast } from "react-toastify";
 
 
+
 function Delapan() {
  
   const [lihatData, setLihatData] = useState([]);
@@ -55,11 +56,7 @@ useEffect(() => {
   FetchData();
 }, []);
 
-// useEffect(() => {
-//   if (nama) {
-//     setFormData((prev) => ({ ...prev, name: nama }));
-//   }
-// }, [nama]);
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
