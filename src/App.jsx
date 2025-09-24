@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AdminPage />} />
           <Route path="/:nama" element={<Awal />} />
-          <Route path="/undangan/:nama" element={<Kedua />} />
+          <Route path="/undangan/" element={<Kedua />} />
         </Routes>
         <ToastContainer theme="colored" />
       </BrowserRouter>

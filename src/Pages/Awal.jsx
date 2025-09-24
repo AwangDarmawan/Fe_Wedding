@@ -44,7 +44,7 @@ const Awal = () => {
             className='filter hue-rotate-300 saturate-200 '
             />
             {/* <Link to="/undangan"> */}
-          <Link to={`/undangan/${nama}`}>
+          <Link to={`/undangan`}>
 
       <button  className="bg-darkgold text-putih  px-6 py-2 rounded-full flex items-center justify-center flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 font-bold font-Montserrat"> 
             <img
@@ -58,7 +58,8 @@ const Awal = () => {
             className='filter hue-rotate-300 saturate-200'
             />
       </div>
-     
+
+
     <div className="text-center mt-36  py-6 text-gray-700  border-3  ">
     <h1 className="text-sm font-Montserrat font-semibold dark:text-darkgold">Copy Right Awang Darmawan</h1>
     <div className=''>
