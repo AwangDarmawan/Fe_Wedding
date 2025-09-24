@@ -12,9 +12,9 @@ function App() {
     <>
        <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AdminPage />} />
+          <Route path="/undangan" element={<AdminPage />} />
           <Route path="/:nama" element={<Awal />} />
-          <Route path="/undangan/" element={<Kedua />} />
+          <Route path="/" element={<Kedua />} />
         </Routes>
         <ToastContainer theme="colored" />
       </BrowserRouter>

@@ -44,7 +44,7 @@ const Awal = () => {
             className='filter hue-rotate-300 saturate-200 '
             />
             {/* <Link to="/undangan"> */}
-          <Link to={`/undangan`}>
+          <Link to={`/`}>
 
       <button  className="bg-darkgold text-putih  px-6 py-2 rounded-full flex items-center justify-center flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 font-bold font-Montserrat"> 
             <img
