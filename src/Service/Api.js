@@ -8,6 +8,7 @@ export const getData = async () => {
     try {
       const response = await axios.get(`${baseUrl}/wedding`);
       console.log("test",response.data)
+      console.log(baseUrl)
       return response.data;
     } catch (error) {
         toast.error(error.response.data.message);
